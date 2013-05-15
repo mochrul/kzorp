@@ -4,7 +4,7 @@ all: iptables-module-make
 
 install: kernel-module-install python-module-install iptables-module-install
 
-clean: iptables-module-clean eet-clean python-module-clean kernel-module-clean
+clean: iptables-module-clean eet-clean python-module-clean
 
 imgtest:
 	(cd end-to-end-test && [ ! -f Makefile ] || $(MAKE))
