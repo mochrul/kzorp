@@ -5,9 +5,7 @@ Maintainer: SZALAY Attila <sasa@debian.org>
 Build-Depends: debhelper (>= 8.0.0), dkms, python-all, iptables-dev,
 	autoconf, automake, libtool, pkg-config
 Standards-Version: 3.9.4
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: git://git.debian.org/collab-maint/kzorp.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/kzorp.git;a=summary
+Homepage: https://github.com/balabit/kzorp
 
 Package: kzorp-dkms
 Architecture: all
@@ -22,7 +20,7 @@ Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
 Package: kzorp-iptables-modules
-Architecture: all
-Depends: ${misc:Depends}
+Architecture: any
+Depends: ${misc:Depends}, ${shlib:depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
