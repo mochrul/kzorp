@@ -11,3 +11,7 @@ export DH_VERBOSE=1
 
 %:
 	dh $@ --with dkms,python2 --fail-missing
+
+override_dh_auto_configure:
+	autoreconf -iv
+	./configure --prefix="/usr"
