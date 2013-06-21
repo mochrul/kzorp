@@ -2,7 +2,7 @@ Source: kzorp
 Section: unknown
 Priority: extra
 Maintainer: SZALAY Attila <sasa@debian.org>
-Build-Depends: debhelper (>= 8.0.0), dkms
+Build-Depends: debhelper (>= 8.0.0), dkms, python-all
 Standards-Version: 3.9.4
 Homepage: <insert the upstream URL, if relevant>
 #Vcs-Git: git://git.debian.org/collab-maint/kzorp.git
@@ -14,8 +14,8 @@ Depends: ${misc:Depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 
-Package: korp
+Package: kzorp
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ${python:Depends}
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
