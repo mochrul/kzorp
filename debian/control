@@ -1,5 +1,5 @@
 Source: kzorp
-Section: unknown
+Section: net
 Priority: extra
 Maintainer: SZALAY Attila <sasa@debian.org>
 Build-Depends: debhelper (>= 8.0.0), dkms, python-all, iptables-dev,
@@ -10,17 +10,30 @@ Homepage: https://github.com/balabit/kzorp
 Package: kzorp-dkms
 Architecture: all
 Depends: ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: kernel modules of the Kzorp
+ Kzorp is a open source set of mechanisms to implement mixed packet
+ filter/application level gateway functionality on Linux.
+ Kzorp is used by Zorp, and anyone is welcome to use it with other gateways.
+ .
+ This package contains the dkms capable kernel modules.
 
 Package: kzorp
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: user space tools to configure the Kzorp
+ Kzorp is a open source set of mechanisms to implement mixed packet
+ filter/application level gateway functionality on Linux.
+ Kzorp is used by Zorp, and anyone is welcome to use it with other gateways.
+ .
+ This package contains the user space tools to upload the configuration
+ to the kernel or get information from it
 
 Package: kzorp-iptables-modules
 Architecture: any
 Depends: ${misc:Depends}, ${shlib:depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: iptables modules needed by the KZorp
+ Kzorp is a open source set of mechanisms to implement mixed packet
+ filter/application level gateway functionality on Linux.
+ Kzorp is used by Zorp, and anyone is welcome to use it with other gateways.
+ .
+ This package contains some modules needed Kzorp to work.
