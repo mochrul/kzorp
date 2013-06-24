@@ -24,11 +24,6 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-Files: kernel-module/tests/rand-lfsr258.*
-Copyright: 1997 D. E. Knuth
-           1999 PIERRE L'ECUYER
-License: UNKNOWN
-
 Files: kernel-module/tests/sort.c
 Copyright: 2005  Matt Mackall <mpm@selenic.com>
 License: GPL-2
