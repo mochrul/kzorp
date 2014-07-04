@@ -1,0 +1,44 @@
+language: c
+compiler:
+  - gcc
+script:
+
+before_install:
+  - source ci/obs_common.sh
+  - source ci/obs_before_install.sh
+  - sudo apt-get install -qq python-software-properties
+  - sudo add-apt-repository -y ppa:dns/gnu
+  - sudo apt-get update -qq
+
+before_script:
+  - sudo apt-get install -qq devscripts equivs
+  - sudo mk-build-deps -i
+
+script:
+  - autoreconf -if
+  - ./configure
+  - make
+  - make check
+  - source ci/obs_prepare.sh
+
+after_success:
+  - source ci/obs_commit.sh
+
+env:
+  global:
+    - secure: "ZV2dZSpOGdsbckOgzbi4pZBNEwVohsex+7UaYZUtsXunraDfYZGp0q91v6AhZhP9LmIWW/TKYzPY6QcTCbWkeyE3rL3cT5a4EcqlAk5OVZN9FtNjUcj4KLgX82Y/hP8cgoq9IUBzKnjUl6B7oXyFlsxMX5TjFYTrQ3JKfqSDV6s="
+    - OBS_HOME=security
+    - OBS_PROJECT=Zorp
+    - OBS_SUBPROJECT=6.0
+    - OBS_PACKAGE=kzorp
+    - secure: "dDT9rtWPh8iYO56qWqatuKRE+gk3xEKKZa/sKSAbb/PyHSsJLkDp9vA4e0+JQNStC4YA+X0L6m4bpt275TKee1ucQg47to/monHmr3FG1LAx6zm8Gq7/4PlFnOo1oxfjFZEUnwF/WNZxjf6Y99n65onKl8fUGknGFnAKf0dYxWo="
+
+addons:
+  coverity_scan:
+    project:
+      name: "balabit/kzorp"
+      description: "Build submitted via Travis CI"
+    notification_email: coroner@pfeifferszilard.hu
+    build_command_prepend: "autoreconf -if; ./configure; make clean"
+    build_command:   "make -j4"
+    branch_pattern: 6.0.0
