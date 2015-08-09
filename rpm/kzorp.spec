@@ -1,5 +1,5 @@
 Name:                   kzorp
-Version:                6.0.0
+Version:                6.0.6
 Release:                1
 URL:                    https://www.balabit.com/network-security/zorp-gpl
 Source0:                kzorp_%{version}.tar.gz
