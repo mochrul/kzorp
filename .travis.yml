@@ -31,4 +31,6 @@ env:
     - OBS_PROJECT=Zorp
     - OBS_SUBPROJECT=6.0
     - OBS_PACKAGE=kzorp
+    - TEST_OS=Ubuntu
+    - TEST_OS_VERSION=12.04
     - secure: "dDT9rtWPh8iYO56qWqatuKRE+gk3xEKKZa/sKSAbb/PyHSsJLkDp9vA4e0+JQNStC4YA+X0L6m4bpt275TKee1ucQg47to/monHmr3FG1LAx6zm8Gq7/4PlFnOo1oxfjFZEUnwF/WNZxjf6Y99n65onKl8fUGknGFnAKf0dYxWo="
