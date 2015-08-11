@@ -10,13 +10,6 @@
 #endif /* _UAPI_LINUX_KERNEL_H */
 #endif /* KZ_USERSPACE */
 
-#ifdef WITH_KZ_TPROXY_CORE_H
-	#include "kz_tproxy_core.h"
-#else
-	#include <net/udp.h>
-	#include <net/netfilter/nf_tproxy_core.h>
-#endif
-
 #include <net/genetlink.h>
 #include <linux/netlink.h>
 
@@ -185,6 +178,19 @@ get_notifier(struct netlink_notify * notifier) {
 
 #ifndef sk_v6_rcv_saddr
 #define sk_v6_rcv_saddr         __sk_common.skc_v6_rcv_saddr
+#endif
+
+#ifdef inet_twsk_for_each
+#define kz_inet_twsk_deschedule(tw) inet_twsk_deschedule((tw), &tcp_death_row)
+#else
+#define kz_inet_twsk_deschedule inet_twsk_deschedule
+#endif
+
+#ifdef WITH_KZ_TPROXY_CORE_H
+	#include "kz_tproxy_core.h"
+#else
+	#include <net/udp.h>
+	#include <net/netfilter/nf_tproxy_core.h>
 #endif
 
 #endif /* _KZORP_COMPAT_H */
