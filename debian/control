@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: SZALAY Attila <sasa@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, dh-python, python-all, dkms
 Standards-Version: 3.9.5
+TestSuite: autopkgtest
 #Homepage: <insert the upstream URL, if relevant>
 #Vcs-Git: git://anonscm.debian.org/collab-maint/kzorp.git
 #Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/kzorp.git;a=summary
