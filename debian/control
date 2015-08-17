@@ -1,0 +1,34 @@
+Source: kzorp
+Section: unknown
+Priority: optional
+Maintainer: SZALAY Attila <sasa@debian.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf, dh-python, python-all, dkms
+Standards-Version: 3.9.5
+#Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/kzorp.git
+#Vcs-Browser: http://anonscm.debian.org/?p=collab-maint/kzorp.git;a=summary
+
+Package: kzorp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Kernel helper module of Zorp firewall
+ The Zorp is an application level proxy firewall.
+ But sometimes copying a packet to application level is
+ bloated. In this case the KZorp help to keep the packets
+ in kernel space while configuring the flow in the same
+ way as when the packet goes to the user space.
+ .
+ This package contains the communication daemon and the
+ the cli client to the kernel interface
+
+Package: kzorp-dkms
+Architecture: all
+Depends: ${misc:Depends}
+Description: Kernel helper module for Zorp firewall
+ The Zorp is an application level proxy firewall.
+ But sometimes copying a packet to application level is
+ bloated. In this case the KZorp help to keep the packets
+ in kernel space while configuring the flow in the same
+ way as when the packet goes to the user space.
+ .
+ This package contains the dkms module of the kernel.

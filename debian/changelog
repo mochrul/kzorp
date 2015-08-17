@@ -1,0 +1,5 @@
+kzorp (6.0.5.git0.c570791d-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- SZALAY Attila <sasa@debian.org>  Mon, 17 Aug 2015 13:24:30 +0000
