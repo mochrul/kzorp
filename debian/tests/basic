@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/bin/sh -e
+
+ps uaxw  | grep kzorpd
+lsmod | grep xt_zone
 
 echo "Done: OK"
