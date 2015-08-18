@@ -23,7 +23,7 @@ Description: Kernel helper module for Zorp firewall
 
 Package: kzorp
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-daemon, python-radix
 Description: Kernel helper module of Zorp firewall
  The Zorp is an application level proxy firewall.
  But sometimes copying a packet to application level is
