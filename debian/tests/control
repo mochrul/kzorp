@@ -1,3 +1,6 @@
 Test-Command: /usr/lib/dkms/dkms-autopkgtest
 Restrictions: needs-root, allow-stderr
 Depends: dkms
+
+Test: basic
+Restrictions: needs-root, isolation-machine
