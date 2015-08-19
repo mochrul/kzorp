@@ -1,0 +1,12 @@
+[Unit]
+Description=Kzorp zone information updater daemon
+After=syslog.target
+
+[Service]
+ExecStart=/usr/sbin/kzorpd --foreground
+Type=simple
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
